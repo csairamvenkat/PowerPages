@@ -1,0 +1,33 @@
+==============================
+Connect to Environment
+==============================
+pac auth create --environment "https://bmsuat1.crm15.dynamics.com/"
+
+
+========================================
+Get Portal List
+========================================
+pac paportal list
+
+
+==================================================
+Download Power Pages Customizations Enhanced Model
+===================================================
+
+pac paportal download --path C:\Users\sai.venkat\Downloads --webSiteId 7c1f005a-1ff1-48b7-b57f-99b8daf3ea76
+
+=================================================
+Migrate enhanced site from 1 instance to other
+=================================================
+pac paportal upload --path Downloads\bmsdev---bmsdev --modelVersion 2 --portal-id 38e57709-bc52-4b93-a433-9db639e2eacb 
+
+
+pac paportal upload --path Downloads\bmsdev---bmsdev --modelVersion 2
+
+
+=================================================
+Standard to Enhanced Migration Commands
+=================================================
+
+Download : pac powerpages migrate-datamodel --webSiteId  452dba2f-4849-ed11-bba2-000d3adf73ab --siteCustomizationReportPath "C:\Users\sai.venkat\OneDrive - DP World\Desktop\PowerPagesMigration"
+Migrate : pac powerpages migrate-datamodel --webSiteId  452dba2f-4849-ed11-bba2-000d3adf73ab --mode all
